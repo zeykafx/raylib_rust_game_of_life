@@ -90,9 +90,7 @@ impl Board {
                     // if the cell is alive
                     if neighbours < 2 || neighbours > 3 {
                         self.set_next_status(x, y, false);
-
                     } else if neighbours == 2 || neighbours == 3 {
-                        // Death by isolation: Each live cell with one or fewer live neighbors will die in the next generation.
                         self.set_next_status(x, y, true);
                     }
                 } else {
